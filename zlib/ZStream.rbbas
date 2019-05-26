@@ -83,7 +83,7 @@ Implements Readable,Writeable
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function Create(OutputStream As FolderItem, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Overwrite As Boolean = False, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
+		Shared Function Create(OutputStream As FolderItem, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Overwrite As Boolean = False, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
 		  ' Create a compression stream where compressed output is written to the OutputStream file.
 		  
 		  Return Create(BinaryStream.Create(OutputStream, Overwrite), CompressionLevel, CompressionStrategy, Encoding, MemoryLevel)
@@ -91,7 +91,7 @@ Implements Readable,Writeable
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function Create(OutputStream As Writeable, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
+		Shared Function Create(OutputStream As Writeable, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
 		  ' Create a compression stream where compressed output is written to the OutputStream object.
 		  
 		  Return New ZStream(New Deflater(CompressionLevel, CompressionStrategy, Encoding, MemoryLevel), OutputStream)
@@ -100,7 +100,7 @@ Implements Readable,Writeable
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function CreatePipe(InputStream As Readable, OutputStream As Writeable, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
+		Shared Function CreatePipe(InputStream As Readable, OutputStream As Writeable, CompressionLevel As Integer = zlib.Z_DEFAULT_COMPRESSION, CompressionStrategy As Integer = zlib.Z_DEFAULT_STRATEGY, Encoding As Integer = zlib.DEFLATE_ENCODING, MemoryLevel As Integer = zlib.DEFAULT_MEM_LVL) As zlib.ZStream
 		  ' Create a compressed stream from two endpoints. Writing to the stream writes compressed bytes to
 		  ' the OutputStream object; reading from the stream decompresses bytes from the InputStream object.
 		  
@@ -207,7 +207,7 @@ Implements Readable,Writeable
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function Open(InputStream As FolderItem, Encoding As Integer = zlib.Z_DETECT) As zlib.ZStream
+		Shared Function Open(InputStream As FolderItem, Encoding As Integer = zlib.Z_DETECT) As zlib.ZStream
 		  ' Create a decompression stream where the compressed input is read from the Source file.
 		  
 		  Return Open(BinaryStream.Open(InputStream), Encoding)
@@ -215,7 +215,7 @@ Implements Readable,Writeable
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function Open(InputStream As Readable, Encoding As Integer = zlib.Z_DETECT) As zlib.ZStream
+		Shared Function Open(InputStream As Readable, Encoding As Integer = zlib.Z_DETECT) As zlib.ZStream
 		  ' Create a decompression stream where the compressed input is read from the InputStream object.
 		  
 		  Return New ZStream(New Inflater(Encoding), InputStream)
@@ -327,7 +327,7 @@ Implements Readable,Writeable
 		      EOL = EndOfLine.Windows
 		    #ElseIf TargetMacOS Then
 		      EOL = EndOfLine.Macintosh
-		    #Else Then
+		    #Else
 		      EOL = EndOfLine.UNIX
 		    #endif
 		  End If
@@ -592,14 +592,14 @@ Implements Readable,Writeable
 			Visible=true
 			Group="ID"
 			InitialValue="-2147483648"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Level"
@@ -610,7 +610,7 @@ Implements Readable,Writeable
 			Name="Name"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Ratio"
@@ -626,14 +626,29 @@ Implements Readable,Writeable
 			Name="Super"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="Encoding"
+			Group="Behavior"
+			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="TotalIn"
+			Group="Behavior"
+			Type="UInt32"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="TotalOut"
+			Group="Behavior"
+			Type="UInt32"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

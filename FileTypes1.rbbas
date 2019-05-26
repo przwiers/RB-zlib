@@ -6,6 +6,11 @@
 		MacCreator=S691
 		MacType=TARF
 		Name=application/x-tar
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -15,6 +20,11 @@
 		MacCreator=SITx
 		MacType=Gzip
 		Name=application/x-gzip
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -24,6 +34,11 @@
 		MacCreator=????
 		MacType=ZIVU
 		Name=application/x-compress
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -34,6 +49,10 @@
 		MacType=ZIP
 		Name=application/zip
 		UTI=com.pkware.zip-archive
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -43,6 +62,11 @@
 		MacCreator=
 		MacType=Bzip
 		Name=application/x-bzip2
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -52,6 +76,11 @@
 		MacCreator=SITx
 		MacType=Gzip
 		Name=application/tar+gzip
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 	#tag FileType
@@ -61,6 +90,11 @@
 		MacCreator=
 		MacType=Bzip
 		Name=application/tar+bzip2
+		UTI=
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
 	#tag EndFileType
 
 #tag EndFileTypeSet

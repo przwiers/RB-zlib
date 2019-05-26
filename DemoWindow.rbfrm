@@ -1,20 +1,22 @@
 #tag Window
 Begin Window DemoWindow
-   BackColor       =   16777215
-   Backdrop        =   ""
+   BackColor       =   &cFFFFFF00
+   Backdrop        =   0
    CloseButton     =   True
+   Compatibility   =   ""
    Composite       =   False
    Frame           =   0
    FullScreen      =   False
+   FullScreenButton=   False
    HasBackColor    =   False
-   Height          =   1.33e+2
+   Height          =   133
    ImplicitInstance=   True
    LiveResize      =   True
    MacProcID       =   0
    MaxHeight       =   32000
    MaximizeButton  =   False
    MaxWidth        =   32000
-   MenuBar         =   ""
+   MenuBar         =   0
    MenuBarVisible  =   True
    MinHeight       =   64
    MinimizeButton  =   False
@@ -23,28 +25,25 @@ Begin Window DemoWindow
    Resizeable      =   False
    Title           =   "zlib Demo"
    Visible         =   True
-   Width           =   2.21e+2
+   Width           =   221
    Begin Timer CompletionTimer
-      Height          =   32
+      Enabled         =   True
       Index           =   -2147483648
-      Left            =   -48
       LockedInPosition=   False
       Mode            =   0
       Period          =   1
       Scope           =   0
       TabPanelIndex   =   0
-      Top             =   -14
-      Width           =   32
    End
    Begin TabPanel TabPanel1
       AutoDeactivate  =   True
-      Bold            =   ""
+      Bold            =   False
       Enabled         =   True
       Height          =   133
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
-      Italic          =   ""
+      Italic          =   False
       Left            =   0
       LockBottom      =   True
       LockedInPosition=   False
@@ -53,53 +52,55 @@ Begin Window DemoWindow
       LockTop         =   True
       Panels          =   ""
       Scope           =   0
-      SmallTabs       =   ""
+      SmallTabs       =   False
       TabDefinition   =   "Deflate\rGZip\rZip\rTAR"
       TabIndex        =   8
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
-      TextSize        =   0
+      TextSize        =   0.0
       TextUnit        =   0
       Top             =   -1
-      Underline       =   ""
+      Transparent     =   True
+      Underline       =   False
       Value           =   2
       Visible         =   True
       Width           =   221
       Begin PushButton InflateFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "INFLATE a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   0
          TabPanelIndex   =   1
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   32
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin CheckBox UseRawChkBx
          AutoDeactivate  =   True
-         Bold            =   ""
+         Bold            =   False
          Caption         =   "Raw DEFLATE"
          DataField       =   ""
          DataSource      =   ""
@@ -108,12 +109,12 @@ Begin Window DemoWindow
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          State           =   0
@@ -121,203 +122,210 @@ Begin Window DemoWindow
          TabPanelIndex   =   1
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   76
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   100
       End
       Begin PushButton DeflateFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "DEFLATE a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   2
          TabPanelIndex   =   1
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   55
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton GUnZipFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "GUnZip a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   0
          TabPanelIndex   =   2
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   32
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton GZipFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "GZip a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   1
          TabPanelIndex   =   2
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   55
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton ZipRepairBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "Repair zip"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   0
          TabPanelIndex   =   3
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   78
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton UnzipFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "Unzip a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   1
          TabPanelIndex   =   3
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   32
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton ZipDirBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "Zip a folder"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   2
          TabPanelIndex   =   3
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   55
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin CheckBox UseGZipChkBx
          AutoDeactivate  =   True
-         Bold            =   ""
+         Bold            =   False
          Caption         =   "Use GZip"
          DataField       =   ""
          DataSource      =   ""
@@ -326,12 +334,12 @@ Begin Window DemoWindow
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   60
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          State           =   0
@@ -339,104 +347,108 @@ Begin Window DemoWindow
          TabPanelIndex   =   4
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   81
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Value           =   False
          Visible         =   True
          Width           =   100
       End
       Begin PushButton TARDirBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "TAR a folder"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   60
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   1
          TabPanelIndex   =   4
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   57
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton UnTarFileBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "UnTAR a file"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   60
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   2
          TabPanelIndex   =   4
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   34
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
       Begin PushButton ZipTestBtn
          AutoDeactivate  =   True
-         Bold            =   ""
-         ButtonStyle     =   0
-         Cancel          =   ""
+         Bold            =   False
+         ButtonStyle     =   "0"
+         Cancel          =   False
          Caption         =   "Test zip"
-         Default         =   ""
+         Default         =   False
          Enabled         =   True
          Height          =   22
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "TabPanel1"
-         Italic          =   ""
+         Italic          =   False
          Left            =   62
-         LockBottom      =   ""
+         LockBottom      =   False
          LockedInPosition=   False
          LockLeft        =   True
-         LockRight       =   ""
+         LockRight       =   False
          LockTop         =   True
          Scope           =   0
          TabIndex        =   3
          TabPanelIndex   =   3
          TabStop         =   True
          TextFont        =   "System"
-         TextSize        =   0
+         TextSize        =   0.0
          TextUnit        =   0
          Top             =   101
-         Underline       =   ""
+         Transparent     =   True
+         Underline       =   False
          Visible         =   True
          Width           =   97
       End
@@ -469,11 +481,11 @@ End
 		  mResult = zlib.Deflate(mSource, mDestination, zlib.Z_DEFAULT_COMPRESSION, False, encoding)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -483,11 +495,11 @@ End
 		  mResult = zlib.GUnZip(mSource, mDestination)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -497,11 +509,11 @@ End
 		  mResult = zlib.GZip(mSource, mDestination)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -517,11 +529,11 @@ End
 		  mResult = zlib.Inflate(mSource, mDestination, False, Nil, encoding)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -533,17 +545,17 @@ End
 		  mResult = USTAR.WriteTar(mSource, mDestination, False, compressionlevel)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
-		  
-		Exception err As USTAR.TARException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
+		    
+		  Exception err As USTAR.TARException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -554,17 +566,17 @@ End
 		  mResult = UBound(mUnzipped) > -1
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
-		  
-		Exception err As USTAR.TARException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
+		    
+		  Exception err As USTAR.TARException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -575,17 +587,17 @@ End
 		  mResult = UBound(mUnzipped) > -1 Or mSource.Length = 22
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
-		  
-		Exception err As PKZip.ZipException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
+		    
+		  Exception err As PKZip.ZipException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -595,17 +607,17 @@ End
 		  mResult = PKZip.WriteZip(mSource, mDestination)
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
-		  
-		Exception err As PKZip.ZipException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
+		    
+		  Exception err As PKZip.ZipException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 
@@ -615,17 +627,17 @@ End
 		  mResult = PKZip.RepairZip(mSource, mDestination, SpecialFolder.Desktop.Child(mSource.Name + "_repair_log.txt"))
 		  CompletionTimer.Mode = Timer.ModeSingle
 		  
-		Exception err As zlib.zlibException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
-		  
-		Exception err As PKZip.ZipException
-		  mResult = False
-		  mErrorCode = err.ErrorNumber
-		  mErrorMsg = err.Message
-		  CompletionTimer.Mode = Timer.ModeSingle
+		  Exception err As zlib.zlibException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
+		    
+		  Exception err As PKZip.ZipException
+		    mResult = False
+		    mErrorCode = err.ErrorNumber
+		    mErrorMsg = err.Message
+		    CompletionTimer.Mode = Timer.ModeSingle
 		End Sub
 	#tag EndMethod
 

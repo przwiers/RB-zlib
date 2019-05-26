@@ -205,7 +205,7 @@ Protected Class ZipReader
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		 Shared Function RepairZip(ZipFile As FolderItem, RecoveryFile As FolderItem, Optional LogFile As FolderItem) As Boolean
+		Shared Function RepairZip(ZipFile As FolderItem, RecoveryFile As FolderItem, Optional LogFile As FolderItem) As Boolean
 		  ' This method attempts to forcibly extract the contents of the archive specified by ZipFile.
 		  ' Corrupt or damaged files within the archive will be extracted as zero-length files with the
 		  ' appropriate path and name. If the RevoveryFile points to a file then the recovered files
@@ -464,6 +464,7 @@ Protected Class ZipReader
 			Name="ArchiveComment"
 			Group="Behavior"
 			Type="String"
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="CompressionLevel"
@@ -479,45 +480,56 @@ Protected Class ZipReader
 			Name="CurrentName"
 			Group="Behavior"
 			Type="String"
+			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Index"
 			Visible=true
 			Group="ID"
 			InitialValue="-2147483648"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Super"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="ValidateChecksums"
 			Group="Behavior"
 			InitialValue="True"
 			Type="Boolean"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="CurrentSize"
+			Group="Behavior"
+			Type="UInt32"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="CurrentUncompressedSize"
+			Group="Behavior"
+			Type="UInt32"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

@@ -363,8 +363,8 @@ Protected Module PKZip
 		  zip.Close
 		  Return ret
 		  
-		Exception
-		  Return ret
+		  Exception
+		    Return ret
 		End Function
 	#tag EndMethod
 
@@ -795,7 +795,7 @@ Protected Module PKZip
 	#tag EndConstant
 
 
-	#tag Structure, Name = ZipDirectoryFooter, Flags = &h21
+	#tag Structure, Name = ZipDirectoryFooter, Flags = &h21, Attributes = \"StructureAlignment \x3D 1"
 		Signature As UInt32
 		  ThisDisk As UInt16
 		  FirstDisk As UInt16
@@ -806,7 +806,7 @@ Protected Module PKZip
 		CommentLength As UInt16
 	#tag EndStructure
 
-	#tag Structure, Name = ZipDirectoryHeader, Flags = &h21
+	#tag Structure, Name = ZipDirectoryHeader, Flags = &h21, Attributes = \"StructureAlignment \x3D 1"
 		Signature As UInt32
 		  Version As UInt16
 		  VersionNeeded As UInt16
@@ -826,14 +826,14 @@ Protected Module PKZip
 		Offset As UInt32
 	#tag EndStructure
 
-	#tag Structure, Name = ZipEntryFooter, Flags = &h21
+	#tag Structure, Name = ZipEntryFooter, Flags = &h21, Attributes = \"StructureAlignment \x3D 1"
 		Signature As UInt32
 		  CRC32 As UInt32
 		  CompressedSize As UInt32
 		UncompressedSize As UInt32
 	#tag EndStructure
 
-	#tag Structure, Name = ZipEntryHeader, Flags = &h21
+	#tag Structure, Name = ZipEntryHeader, Flags = &h21, Attributes = \"StructureAlignment \x3D 1"
 		Signature As UInt32
 		  Version As UInt16
 		  Flag As UInt16

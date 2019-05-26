@@ -1030,7 +1030,7 @@ Protected Module zlib
 	#tag EndConstant
 
 
-	#tag Structure, Name = gz_headerp, Flags = &h1
+	#tag Structure, Name = gz_headerp, Flags = &h1, Attributes = \"StructureAlignment \x3D 1"
 		Text As Integer
 		  Time As UInt32
 		  xflags As Integer
@@ -1046,7 +1046,7 @@ Protected Module zlib
 		Done As Integer
 	#tag EndStructure
 
-	#tag Structure, Name = z_stream_32_1, Flags = &h21
+	#tag Structure, Name = z_stream_32_1, Flags = &h21, Attributes = \"StructureAlignment \x3D 1"
 		next_in as Ptr
 		  avail_in as UInt32
 		  total_in as UInt32
@@ -1104,33 +1104,33 @@ Protected Module zlib
 			Visible=true
 			Group="ID"
 			InitialValue="-2147483648"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Left"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Super"
 			Visible=true
 			Group="ID"
-			InheritedFrom="Object"
+			Type="String"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Top"
 			Visible=true
 			Group="Position"
 			InitialValue="0"
-			InheritedFrom="Object"
+			Type="Integer"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Module
